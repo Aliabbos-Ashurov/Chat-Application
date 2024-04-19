@@ -12,8 +12,8 @@ import java.util.UUID;
 @Getter
 @ToString(callSuper = true)
 public class Chat extends BaseModel {
-    private UUID user1;
-    private UUID user2;
+    private final UUID user1;
+    private final UUID user2;
     public Chat(UUID user1,UUID user2) {
         this.user1 = user1;
         this.user2 = user2;

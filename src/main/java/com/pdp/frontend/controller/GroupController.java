@@ -94,6 +94,7 @@ public class GroupController {
                 System.out.println((i + 1) + " - " + message.getContent());
             }
             Message fromList = ListUtils.getFromList(groupMessage, ScanUtils.scanInt());
+            if (Objects.isNull(fromList)) return;
             isWorked = messageService.delete(fromList.getId());
         }
         notification.notificationMessage("Message","deleted",isWorked);

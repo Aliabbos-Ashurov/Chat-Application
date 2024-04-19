@@ -50,14 +50,6 @@ public class MessageServiceImpl implements MessageService{
     }
 
     @Override
-    public List<Message> getUserMessage(UUID userID) {
-        List<Message> messages = repository.getAll();
-        return messages.stream()
-                .filter(message -> message.getFromID().equals(userID))
-                .collect(Collectors.toList());
-    }
-
-    @Override
     public boolean update(Message object) {
         Message message = repository.findById(object.getId());
         if (Objects.isNull(message)) return false;

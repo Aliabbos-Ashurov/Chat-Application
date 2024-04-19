@@ -14,7 +14,6 @@ import java.util.UUID;
  **/
 public interface MessageService extends BaseService<Message> {
     MessageRepository repository = new MessageRepository();
-    List<Message> getUserMessage(UUID userID);
     List<Message> getChatMessage(UUID chatID);
     List<Message> getGroupMessage(List<Chat> chats);
 
