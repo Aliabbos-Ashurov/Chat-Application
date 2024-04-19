@@ -1,15 +1,11 @@
 package com.pdp.backend.service.message;
 
-import com.pdp.backend.enums.MsgType;
 import com.pdp.backend.model.chat.Chat;
 import com.pdp.backend.model.message.Message;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 14/April/2024  12:20

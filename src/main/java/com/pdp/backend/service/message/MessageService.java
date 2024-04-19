@@ -2,7 +2,6 @@ package com.pdp.backend.service.message;
 
 import com.pdp.backend.model.chat.Chat;
 import com.pdp.backend.model.message.Message;
-import com.pdp.backend.model.user.User;
 import com.pdp.backend.repository.message.MessageRepository;
 import com.pdp.backend.service.BaseService;
 

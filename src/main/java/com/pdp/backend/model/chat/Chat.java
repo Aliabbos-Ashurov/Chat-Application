@@ -2,12 +2,9 @@ package com.pdp.backend.model.chat;
 
 import com.pdp.backend.model.BaseModel;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
-import java.io.Serializable;
 import java.util.UUID;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 12/April/2024  09:31

@@ -2,17 +2,10 @@ package com.pdp.backend.service.members;
 
 import com.pdp.backend.enums.Role;
 import com.pdp.backend.model.members.Members;
-import com.pdp.backend.model.user.User;
-import com.pdp.backend.repository.user.UserRepository;
-import com.pdp.backend.service.user.UserServiceImpl;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 14/April/2024  11:33

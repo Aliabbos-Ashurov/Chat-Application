@@ -2,8 +2,6 @@ package com.pdp.backend.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NonNull;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 10/April/2024  21:56

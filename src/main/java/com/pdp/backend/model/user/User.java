@@ -1,17 +1,12 @@
 package com.pdp.backend.model.user;
 
-import com.pdp.backend.enums.Role;
 import com.pdp.backend.model.BaseModel;
 import com.pdp.backend.model.support.Displayable;
 import lombok.*;
-
-import java.io.Serializable;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 10/April/2024  21:57
  **/
-
 @Getter
 @Setter
 @ToString(callSuper = true)

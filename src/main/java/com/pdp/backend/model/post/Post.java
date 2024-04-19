@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-
-import java.io.Serializable;
 import java.util.UUID;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 14/April/2024  12:07

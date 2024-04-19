@@ -5,11 +5,7 @@ import com.pdp.backend.model.support.Displayable;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.extern.flogger.Flogger;
-
-import java.io.Serializable;
 import java.util.UUID;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 12/April/2024  09:16

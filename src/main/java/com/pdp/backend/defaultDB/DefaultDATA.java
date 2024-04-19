@@ -1,18 +1,12 @@
 package com.pdp.backend.defaultDB;
 
-import com.pdp.backend.enums.Role;
 import com.pdp.backend.model.channel.Channel;
 import com.pdp.backend.model.group.Group;
-import com.pdp.backend.model.members.Members;
-import com.pdp.backend.model.post.Post;
 import com.pdp.backend.model.user.User;
 import com.pdp.backend.service.channel.ChannelServiceImpl;
 import com.pdp.backend.service.group.GroupServiceImpl;
-import com.pdp.backend.service.members.MembersServiceImpl;
 import com.pdp.backend.service.post.PostServiceImpl;
-import com.pdp.backend.service.subscribers.SubscribersServiceImpl;
 import com.pdp.backend.service.user.UserServiceImpl;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 14/April/2024  10:29
