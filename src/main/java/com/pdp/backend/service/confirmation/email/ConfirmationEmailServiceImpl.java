@@ -53,7 +53,7 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
 
     /**
      * Sends a confirmation code email to the specified user.
-     *
+     * @see ConfirmationEmailService#emailSender(UUID, String, MailType)
      * @param userID   The ID of the user.
      * @param email    The email address of the user.
      * @param mailType The type of email to send.
@@ -68,10 +68,9 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
         dispatchConfirmationCode(email, session, confirmationEmail.getCode());
         return true;
     }
-
     /**
      * Retrieves an existing confirmation email for the specified user or creates a new one if none exists.
-     *
+     * @see ConfirmationEmailService#getOrCreate(UUID, String, MailType)
      * @param userID   The ID of the user.
      * @param email    The email address of the user.
      * @param mailType The type of email.
@@ -107,7 +106,7 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
 
      /**
      * Retrieves the confirmation code associated with the specified user and email type.
-     *
+     * @see ConfirmationEmailService#getConfirmationCodeByUser(UUID, MailType)
      * @param userID   The ID of the user.
      * @param mailType The type of email.
      * @return The confirmation code, or 0 if not found.
