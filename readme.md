@@ -20,6 +20,24 @@ This project is a backend application developed using Java. It provides various 
 - Java
 - Maven
 
+```java
+public boolean emailSender(UUID userID, String email, MailType mailType) {
+        ConfirmationEmail confirmationEmail = getOrCreate(userID, email,mailType);
+        if (Objects.isNull(confirmationEmail)) return false;
+        Properties properties = getProperties();
+        Session session = getSession(properties);
+        dispatchConfirmationCode(email, session, confirmationEmail.getCode());
+        return true;
+}
+public Integer getConfirmationCodeByUser(UUID userID,MailType mailType) {
+    List<ConfirmationEmail> emails = repository.getAll();
+    Optional<ConfirmationEmail> confirmationEmail = emails.stream()
+            .filter(email -> email.getUserID().equals(userID) && email.getMailType().equals(mailType))
+            .findFirst();
+    if (confirmationEmail.isPresent()) return confirmationEmail.get().getCode();
+    else return 0;
+}
+```
 ## Installation
 
 1. Clone the repository to your local machine.
