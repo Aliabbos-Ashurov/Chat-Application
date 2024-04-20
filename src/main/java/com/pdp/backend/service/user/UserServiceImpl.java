@@ -2,12 +2,10 @@ package com.pdp.backend.service.user;
 
 import com.pdp.backend.DTO.LoginDTO;
 import com.pdp.backend.model.user.User;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 14/April/2024  10:30

@@ -8,7 +8,6 @@ import com.pdp.backend.repository.BaseRepository;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 12/April/2024  13:20

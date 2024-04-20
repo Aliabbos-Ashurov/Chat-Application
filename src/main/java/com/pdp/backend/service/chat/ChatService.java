@@ -3,7 +3,6 @@ package com.pdp.backend.service.chat;
 import com.pdp.backend.model.chat.Chat;
 import com.pdp.backend.repository.chat.ChatRepository;
 import com.pdp.backend.service.BaseService;
-
 import java.util.List;
 import java.util.UUID;
 

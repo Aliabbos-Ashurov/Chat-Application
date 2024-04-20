@@ -1,7 +1,6 @@
 package com.pdp.backend.service.channel;
 
 import com.pdp.backend.model.channel.Channel;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;

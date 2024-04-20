@@ -1,7 +1,6 @@
 package com.pdp.frontend.utils;
 
 import java.util.Scanner;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 12/April/2024  11:30

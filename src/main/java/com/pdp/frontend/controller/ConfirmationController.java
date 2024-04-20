@@ -7,7 +7,6 @@ import com.pdp.frontend.notification.NotificationService;
 import com.pdp.frontend.notification.NotificationServiceImpl;
 import com.pdp.frontend.utils.MenuUtils;
 import com.pdp.frontend.utils.ScanUtils;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 18/April/2024  09:35

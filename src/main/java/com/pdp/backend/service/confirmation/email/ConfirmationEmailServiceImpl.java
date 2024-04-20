@@ -3,7 +3,6 @@ package com.pdp.backend.service.confirmation.email;
 import com.pdp.backend.enums.MailType;
 import com.pdp.backend.model.confirmation.ConfirmationEmail;
 import lombok.SneakyThrows;
-
 import javax.mail.*;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.NewsAddress;
@@ -11,7 +10,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 14/April/2024  11:29

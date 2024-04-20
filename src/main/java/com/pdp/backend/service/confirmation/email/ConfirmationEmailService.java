@@ -4,7 +4,6 @@ import com.pdp.backend.enums.MailType;
 import com.pdp.backend.model.confirmation.ConfirmationEmail;
 import com.pdp.backend.repository.confirmation.ConfirmationEmailRepository;
 import com.pdp.backend.service.BaseService;
-
 import java.util.UUID;
 
 /**

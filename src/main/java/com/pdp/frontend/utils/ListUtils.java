@@ -1,11 +1,9 @@
 package com.pdp.frontend.utils;
 
 import com.pdp.backend.model.support.Displayable;
-
-import static com.pdp.frontend.notification.NotificationServiceImpl.*;
-
 import java.util.List;
-
+import static com.pdp.frontend.notification.NotificationServiceImpl.ANSI_GREEN;
+import static com.pdp.frontend.notification.NotificationServiceImpl.ANSI_RESET;
 /**
  * @author Aliabbos Ashurov
  * Date: 12/April/2024  13:40

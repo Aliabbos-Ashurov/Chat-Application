@@ -4,7 +4,6 @@ import com.pdp.backend.model.chat.Chat;
 import com.pdp.backend.model.message.Message;
 import com.pdp.backend.repository.message.MessageRepository;
 import com.pdp.backend.service.BaseService;
-
 import java.util.List;
 import java.util.UUID;
 

@@ -3,7 +3,6 @@ package com.pdp.backend.service.channel;
 import com.pdp.backend.model.channel.Channel;
 import com.pdp.backend.repository.channel.ChannelRepository;
 import com.pdp.backend.service.BaseService;
-
 import java.util.List;
 import java.util.UUID;
 

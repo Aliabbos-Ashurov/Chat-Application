@@ -15,12 +15,10 @@ import com.pdp.frontend.notification.NotificationServiceImpl;
 import com.pdp.frontend.utils.ListUtils;
 import com.pdp.frontend.utils.MenuUtils;
 import com.pdp.frontend.utils.ScanUtils;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
-
 /**
  * @author Aliabbos Ashurov
  * Date: 17/April/2024  13:56

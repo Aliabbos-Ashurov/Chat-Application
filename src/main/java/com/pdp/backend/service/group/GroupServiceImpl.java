@@ -1,7 +1,6 @@
 package com.pdp.backend.service.group;
 
 import com.pdp.backend.model.group.Group;
-
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
