@@ -12,10 +12,6 @@ public interface ScanUtils {
         System.out.print(message+"-> ");
         return strScan.nextLine();
     }
-    static String scanStr() {
-        System.out.print("->");
-        return strScan.nextLine();
-    }
     static int scanInt(String message) {
         System.out.print(message+"-> ");
         return numScan.nextInt();
