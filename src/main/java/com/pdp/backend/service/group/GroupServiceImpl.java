@@ -1,7 +1,7 @@
 package com.pdp.backend.service.group;
 
-import com.pdp.backend.defaultDB.DefaultDATA;
 import com.pdp.backend.model.group.Group;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -19,7 +19,6 @@ public class GroupServiceImpl implements GroupService{
     public static GroupServiceImpl getInstance() {
         if (instance == null) {
             instance = new GroupServiceImpl();
-            DefaultDATA.defaultGroup(instance);
         }
         return instance;
     }

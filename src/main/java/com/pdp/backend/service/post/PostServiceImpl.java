@@ -1,7 +1,7 @@
 package com.pdp.backend.service.post;
 
-import com.pdp.backend.defaultDB.DefaultDATA;
 import com.pdp.backend.model.post.Post;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -16,7 +16,6 @@ public class PostServiceImpl implements PostService{
     public static PostServiceImpl getInstance() {
         if (instance == null) {
             instance = new PostServiceImpl();
-            DefaultDATA.defaultPost(instance);
         }
         return instance;
     }

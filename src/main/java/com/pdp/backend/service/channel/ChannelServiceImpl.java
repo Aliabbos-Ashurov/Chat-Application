@@ -1,7 +1,7 @@
 package com.pdp.backend.service.channel;
 
-import com.pdp.backend.defaultDB.DefaultDATA;
 import com.pdp.backend.model.channel.Channel;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -17,7 +17,6 @@ public class ChannelServiceImpl implements ChannelService{
     public static ChannelServiceImpl getInstance() {
         if (instance == null) {
             instance =  new ChannelServiceImpl();
-            DefaultDATA.defaultChannel(instance);
         }
         return instance;
     }

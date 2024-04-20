@@ -1,7 +1,6 @@
 package com.pdp.backend.service.user;
 
 import com.pdp.backend.DTO.LoginDTO;
-import com.pdp.backend.defaultDB.DefaultDATA;
 import com.pdp.backend.model.user.User;
 
 import java.util.List;
@@ -19,7 +18,6 @@ public class UserServiceImpl implements UserService{
     public static UserServiceImpl getInstance() {
         if (instance == null) {
             instance = new UserServiceImpl();
-            DefaultDATA.defaultUser(instance);
         }
         return instance;
     }
