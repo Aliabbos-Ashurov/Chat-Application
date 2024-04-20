@@ -1,9 +1,18 @@
 package com.pdp.backend.nio.pathConfig;
 
 /**
+ * The ChildPath class provides constants for file paths used in the application.
+ * It defines the child paths for various types of data stored in files.
+ *
+ * This class is final and contains only static members.
+ * ChildPath is intended to be used for accessing predefined file paths throughout the application.
+ *
+ * The constants specify the child paths for different types of data stored in files, such as channels, chats, emails, etc.
+ *
  * @author Aliabbos Ashurov
- * Date: 19/April/2024  13:49
- **/
+ * @version 1.0
+ * @since 19/April/2024
+ */
 public final class ChildPath {
     public static final String CHANNELS = "channels.txt";
     public static final String CHAT = "chats.txt";

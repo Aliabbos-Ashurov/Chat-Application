@@ -4,10 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import java.util.Set;
 import static com.pdp.backend.enums.Permission.*;
+
 /**
+ * The Role enum represents roles that users can have in the system.
+ * Each role defines a set of permissions that users with that role possess.
+ *
+ * Roles are typically used to control access to different features and functionalities within the system.
+ * This enum provides predefined roles such as USER and ADMIN, each with its associated set of permissions.
+ *
  * @author Aliabbos Ashurov
- * Date: 10/April/2024  22:14
- **/
+ * @version 1.0
+ * @since 10/April/2024
+ */
 @AllArgsConstructor
 @Getter
 public enum Role {

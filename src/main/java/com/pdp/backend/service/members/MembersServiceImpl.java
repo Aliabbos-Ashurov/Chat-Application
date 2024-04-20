@@ -7,8 +7,14 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 /**
+ * The MembersServiceImpl class provides the implementation for the MembersService interface.
+ * It handles operations related to group members.
+ *
+ * @see com.pdp.backend.service.members.MembersService
+ * @see com.pdp.backend.repository.members.MembersRepository
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  11:33
+ * @version 1.0
+ * @since 14/April/2024
  **/
 public class MembersServiceImpl implements MembersService{
     private static MembersServiceImpl instance;
@@ -20,6 +26,7 @@ public class MembersServiceImpl implements MembersService{
         }
         return instance;
     }
+    
     @Override
     public boolean add(Members object) {
         List<Members> members = repository.getAll();
@@ -29,6 +36,11 @@ public class MembersServiceImpl implements MembersService{
         return repository.add(object);
     }
 
+    /**
+     * @see com.pdp.backend.service.members.MembersService#getGroupMembers(UUID) 
+     * @param groupID The UUID of the group whose members are to be retrieved
+     * @return
+     */
     @Override
     public List<Members> getGroupMembers(UUID groupID) {
         List<Members> members = repository.getAll();
@@ -37,6 +49,11 @@ public class MembersServiceImpl implements MembersService{
                 .collect(Collectors.toList());
     }
 
+    /**
+     * @see com.pdp.backend.service.members.MembersService#getUserJoinedGroup(UUID) 
+     * @param userID The UUID of the user whose joined group members are to be retrieved
+     * @return
+     */
     @Override
     public List<Members> getUserJoinedGroup(UUID userID) {
         List<Members> members = repository.getAll();

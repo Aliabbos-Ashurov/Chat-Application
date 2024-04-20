@@ -7,9 +7,14 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 /**
+ * The SubscribersServiceImpl class provides the implementation for the SubscribersService interface.
+ * It handles operations related to subscribers.
+ *
+ * @see com.pdp.backend.service.subscribers.SubscribersService
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  12:25
- **/
+ * @version 1.0
+ * @since 14/April/2024
+ */
 public class SubscribersServiceImpl implements SubscribersService{
     private static SubscribersServiceImpl instance;
 
@@ -32,6 +37,13 @@ public class SubscribersServiceImpl implements SubscribersService{
         return repository.add(object);
     }
 
+    /**
+     * Retrieves all subscribers joined to a specific channel by a user.
+     *
+     * @see com.pdp.backend.service.subscribers.SubscribersService#getUserJoinedChannel(UUID)
+     * @param userID The UUID of the user whose joined channel subscribers are to be retrieved
+     * @return The list of subscribers joined to the specified channel by the user
+     */
     @Override
     public List<Subscribers> getUserJoinedChannel(UUID userID) {
         List<Subscribers> subscribers = repository.getAll();

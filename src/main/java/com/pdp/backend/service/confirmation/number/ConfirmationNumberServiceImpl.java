@@ -5,9 +5,13 @@ import java.util.List;
 import java.util.UUID;
 
 /**
+ * The ConfirmationNumberServiceImpl class provides the implementation for the ConfirmationNumberService interface.
+ * It handles operations related to confirmation numbers.
+ *
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  11:30
- **/
+ * @version 1.0
+ * @since 14/April/2024
+ */
 public class ConfirmationNumberServiceImpl implements ConfirmationNumberService{
     private static ConfirmationNumberServiceImpl instance;
 

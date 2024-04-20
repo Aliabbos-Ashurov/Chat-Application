@@ -6,23 +6,48 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 /**
+ * The PostServiceImpl class provides the implementation for the PostService interface.
+ * It handles operations related to posts.
+ *
+ * @see com.pdp.backend.service.post.PostService
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  12:14
+ * @version 1.0
+ * @since 14/April/2024
  **/
 public class PostServiceImpl implements PostService{
     private static PostServiceImpl instance;
     private PostServiceImpl() {}
+
+    /**
+     * Retrieves the singleton instance of the PostServiceImpl class.
+     *
+     * @return The singleton instance of the PostServiceImpl class
+     */
     public static PostServiceImpl getInstance() {
         if (instance == null) {
             instance = new PostServiceImpl();
         }
         return instance;
     }
+
+    /**
+     * Adds a new post to the repository.
+     *
+     * @param object The post to add
+     * @return True if the post is successfully added, otherwise false
+     */
     @Override
     public boolean add(Post object) {
         repository.add(object);
         return true;
     }
+
+    /**
+     * Retrieves all posts belonging to a specific channel.
+     * @see com.pdp.backend.service.post.PostService#getChannelPost(UUID) 
+     * @param channelID The UUID of the channel whose posts are to be retrieved
+     * @return The list of posts belonging to the specified channel
+     */
     @Override
     public List<Post> getChannelPost(UUID channelID) {
         List<Post> posts = repository.getAll();

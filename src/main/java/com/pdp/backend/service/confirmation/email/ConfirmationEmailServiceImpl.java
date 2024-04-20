@@ -11,9 +11,14 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 /**
+ * The ConfirmationEmailServiceImpl class provides the implementation for the ConfirmationEmailService interface.
+ * It handles operations related to confirmation emails, including sending confirmation codes and managing confirmation email records.
+ *
+ * @see ConfirmationEmailService
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  11:29
- **/
+ * @version 1.0
+ * @since 14/April/2024
+ */
 public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
     private static ConfirmationEmailServiceImpl instance;
 
@@ -24,15 +29,36 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
         }
         return instance;
     }
+    /**
+     * Adds a confirmation email to the repository.
+     * @see com.pdp.backend.repository.confirmation.ConfirmationEmailRepository
+     * @param object The confirmation email object to add.
+     * @return True if the operation is successful, false otherwise.
+     */
     @Override
     public boolean add(ConfirmationEmail object) {
         return repository.add(object);
     }
 
+    /**
+     * Searches for confirmation emails based on the given query.
+     *
+     * @param query The query string to search for.
+     * @return A list of confirmation emails matching the query.
+     */
     @Override
     public List<ConfirmationEmail> search(String query) {
         return null;
     }
+
+    /**
+     * Sends a confirmation code email to the specified user.
+     *
+     * @param userID   The ID of the user.
+     * @param email    The email address of the user.
+     * @param mailType The type of email to send.
+     * @return True if the email is successfully sent, false otherwise.
+     */
     @Override
     public boolean emailSender(UUID userID, String email, MailType mailType) {
         ConfirmationEmail confirmationEmail = getOrCreate(userID, email,mailType);
@@ -42,6 +68,15 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
         dispatchConfirmationCode(email, session, confirmationEmail.getCode());
         return true;
     }
+
+    /**
+     * Retrieves an existing confirmation email for the specified user or creates a new one if none exists.
+     *
+     * @param userID   The ID of the user.
+     * @param email    The email address of the user.
+     * @param mailType The type of email.
+     * @return The existing or newly created confirmation email.
+     */
     @Override
     public ConfirmationEmail getOrCreate(UUID userID, String email,MailType mailType) {
         List<ConfirmationEmail> sentList = repository.getAll();
@@ -69,6 +104,14 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
     private int generateConfirmationCode() {
         return new Random().nextInt(100000, 999999);
     }
+
+    /**
+     * Retrieves the confirmation code associated with the specified user and email type.
+     *
+     * @param userID   The ID of the user.
+     * @param mailType The type of email.
+     * @return The confirmation code, or 0 if not found.
+     */
     @Override
     public Integer getConfirmationCodeByUser(UUID userID,MailType mailType) {
         List<ConfirmationEmail> emails = repository.getAll();

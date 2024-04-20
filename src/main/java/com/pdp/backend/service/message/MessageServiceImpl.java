@@ -7,8 +7,13 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 /**
+ * The MessageServiceImpl class provides the implementation for the MessageService interface.
+ * It handles operations related to messages.
+ *
+ * @see com.pdp.backend.service.message.MessageService
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  12:20
+ * @version 1.0
+ * @since 14/April/2024
  **/
 public class MessageServiceImpl implements MessageService{
     private static MessageServiceImpl instance;
@@ -33,7 +38,13 @@ public class MessageServiceImpl implements MessageService{
         return null;
     }
 
-
+    /**
+     * Retrieves messages from a list of chats.
+     *
+     * @see com.pdp.backend.service.message.MessageService#getGroupMessage(List)
+     * @param chats The list of chats from which messages are to be retrieved
+     * @return A list of messages from the specified list of chats
+     */
     @Override
     public List<Message> getGroupMessage(List<Chat> chats) {
         List<Message> messages = repository.getAll();
@@ -41,6 +52,14 @@ public class MessageServiceImpl implements MessageService{
                 .filter(message -> chats.stream().anyMatch(chat -> message.getChatID().equals(chat.getId())))
                 .collect(Collectors.toList());
     }
+    
+    /**
+     * Retrieves messages from a specified chat.
+     *
+     * @see com.pdp.backend.service.message.MessageService#getChatMessage(UUID)
+     * @param chatID The UUID of the chat from which messages are to be retrieved
+     * @return A list of messages from the specified chat
+     */
     @Override
     public List<Message> getChatMessage(UUID chatID) {
         List<Message> messages = repository.getAll();

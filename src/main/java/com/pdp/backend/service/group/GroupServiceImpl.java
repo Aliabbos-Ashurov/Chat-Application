@@ -6,8 +6,13 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 /**
+ * The GroupServiceImpl class provides the implementation for the GroupService interface.
+ * It handles operations related to groups.
+ *
+ * @see com.pdp.backend.service.group.GroupService
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  11:08
+ * @version 1.0
+ * @since 14/April/2024
  **/
 public class GroupServiceImpl implements GroupService{
     private static GroupServiceImpl instance;
@@ -15,6 +20,10 @@ public class GroupServiceImpl implements GroupService{
     private GroupServiceImpl() {
     }
 
+    /**
+     * Returns the singleton instance of GroupServiceImpl.
+     * @return The singleton instance of GroupServiceImpl
+     */
     public static GroupServiceImpl getInstance() {
         if (instance == null) {
             instance = new GroupServiceImpl();

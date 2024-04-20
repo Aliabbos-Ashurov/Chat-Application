@@ -7,9 +7,14 @@ import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 /**
+ * The UserServiceImpl class provides implementations for managing user entities.
+ *
+ * @see com.pdp.backend.service.user.UserService
+ * @see com.pdp.backend.service.BaseService
  * @author Aliabbos Ashurov
- * Date: 14/April/2024  10:30
- **/
+ * @version 1.0
+ * @since 14/April/2024
+ */
 public class UserServiceImpl implements UserService{
     private static UserServiceImpl instance;
     private UserServiceImpl() {}
@@ -27,12 +32,26 @@ public class UserServiceImpl implements UserService{
         if (noneExistUsername) repository.add(object);
         return noneExistUsername;
     }
+
+    /**
+     * Checks if a user exists in the database based on the login credentials provided.
+     *
+     * @param dto The LoginDTO object containing login credentials
+     * @return True if the user exists, false otherwise
+     */
     @Override
     public boolean checkUserFromDB(LoginDTO dto) {
         List<User> users = repository.getAll();
         return users.stream()
                 .anyMatch(user -> user.getUsername().equals(dto.username()) && user.getPassword().equals(dto.password()));
     }
+
+    /**
+     * Retrieves all users whose usernames match the provided query.
+     *
+     * @param query The username query to search for
+     * @return The list of users matching the query
+     */
     @Override
     public List<User> search(String query) {
         List<User> users = repository.getAll();
@@ -46,6 +65,12 @@ public class UserServiceImpl implements UserService{
         return check1 || check2;
     }
 
+    /**
+     * Updates the information of a user in the database.
+     *
+     * @param object The user object with updated information
+     * @return True if the user information is successfully updated, false otherwise
+     */
     @Override
     public boolean update(User object) {
         User user = repository.findById(object.getId());
@@ -60,6 +85,12 @@ public class UserServiceImpl implements UserService{
         return false;
     }
 
+    /**
+     * Retrieves a user from the database based on the username.
+     *
+     * @param username The username of the user to retrieve
+     * @return The user object if found, null otherwise
+     */
     @Override
     public User getUserByName(String username) {
         var users = repository.getAll();
@@ -68,14 +99,33 @@ public class UserServiceImpl implements UserService{
                 .findFirst().orElse(null);
     }
 
+    /**
+     * Deletes a user from the database.
+     *
+     * @param id The UUID of the user to delete
+     * @return True if the user is successfully deleted, false otherwise
+     */
     @Override
     public boolean delete(UUID id) {
         return repository.remove(id);
     }
+
+    /**
+     * Retrieves all users from the database.
+     *
+     * @return The list of all users
+     */
     @Override
     public List<User> getAll() {
         return repository.getAll();
     }
+
+    /**
+     * Retrieves a user from the database based on the provided UUID.
+     *
+     * @param id The UUID of the user to retrieve
+     * @return The user object if found, null otherwise
+     */
     @Override
     public User getById(UUID id) {
         return repository.findById(id);

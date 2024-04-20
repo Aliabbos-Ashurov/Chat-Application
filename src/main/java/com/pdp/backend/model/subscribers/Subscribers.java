@@ -8,9 +8,17 @@ import lombok.Setter;
 import lombok.ToString;
 import java.util.UUID;
 /**
+ * The Subscribers class represents the subscribers of a channel in a chat application.
+ * It extends the BaseModel class.
+ * Each Subscribers instance represents a user's subscription to a specific channel, identified by the channel ID.
+ * It includes the user's ID, the channel's ID, and the role of the user within the channel.
+ *
+ * This class provides a structured representation of channel subscribers.
+ *
  * @author Aliabbos Ashurov
- * Date: 12/April/2024  12:44
- **/
+ * @version 1.0
+ * @since 12/April/2024
+ */
 @Getter
 @Setter
 @ToString(callSuper = true)
