@@ -105,7 +105,7 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
         return new Random().nextInt(100000, 999999);
     }
 
-    /**
+     /**
      * Retrieves the confirmation code associated with the specified user and email type.
      *
      * @param userID   The ID of the user.
