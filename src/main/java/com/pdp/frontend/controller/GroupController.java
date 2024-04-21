@@ -42,7 +42,9 @@ public class GroupController {
                 case 2 -> groupJoin();
                 case 3 -> groupLeave();
                 case 4 -> groupJoined();
-                case 0 -> UserController.afterLog();
+                case 0 -> {
+                    return;
+                }
             }
         }
     }
@@ -54,7 +56,9 @@ public class GroupController {
                 case 2 -> groupEdit();
                 case 3 -> groupDelete();
                 case 4 -> groupShowUsers();
-                case 0 -> UserController.afterLog();
+                case 0 -> {
+                    return;
+                }
             }
         }
     }

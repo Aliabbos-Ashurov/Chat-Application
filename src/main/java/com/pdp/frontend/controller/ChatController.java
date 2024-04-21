@@ -35,7 +35,9 @@ public class ChatController {
                 case 1 -> sendMessages();
                 case 2 -> editMessages();
                 case 3 -> deleteMessages();
-                case 0 -> UserController.afterLog();
+                case 0 -> {
+                    return;
+                }
             }
         }
     }

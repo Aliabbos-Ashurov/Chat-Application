@@ -20,7 +20,9 @@ public class ConfirmationController {
             switch (ScanUtils.scanInt()) {
                 case 1 -> changePassword();
                 case 2 -> twoStepVerification();
-                case 0 -> UserController.afterLog();
+                case 0 -> {
+                    return;
+                }
             }
         }
     }

@@ -52,7 +52,9 @@ public class ChannelController {
                 case 2 -> channelJoin();
                 case 3 -> channelLeave();
                 case 4 -> channelJoined();
-                case 0 -> UserController.afterLog();
+                case 0 -> {
+                    return;
+                }
             }
         }
     }
