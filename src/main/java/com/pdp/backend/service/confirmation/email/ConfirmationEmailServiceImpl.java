@@ -143,7 +143,6 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
             }
         });
     }
-
     private Properties getProperties() {
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.gmail.com");
