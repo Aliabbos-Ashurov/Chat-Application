@@ -120,6 +120,7 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
         if (confirmationEmail.isPresent()) return confirmationEmail.get().getCode();
         else return 0;
     }
+
     @SneakyThrows
     private LocalDateTime createDateFromFile(String pattern) {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yy - HH:mm:ss");
