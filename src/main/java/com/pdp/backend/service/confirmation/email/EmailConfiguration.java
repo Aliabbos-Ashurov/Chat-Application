@@ -10,5 +10,5 @@ package com.pdp.backend.service.confirmation.email;
  */
 public class EmailConfiguration {
     protected static final String USERNAME = "aliabbosashurov.forwork@gmail.com";
-    protected static final String PASSWORD = "lrag ytzo cutn klsh";
+    protected static final String PASSWORD = "qbnx yxfi wanc ojxd";
 }
