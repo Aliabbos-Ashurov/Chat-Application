@@ -127,6 +127,14 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
         return LocalDateTime.parse(pattern,dateTimeFormatter);
     }
 
+    /**
+     * Dispatches an email containing a confirmation code to the specified email address.
+     *
+     * @param email The recipient's email address.
+     * @param session The email session used for sending the message.
+     * @param confirmationCode The confirmation code to be included in the email.
+     * @throws MessagingException if an error occurs while preparing or sending the email.
+     */
     @SneakyThrows
     private void dispatchConfirmationCode(String email, Session session, Integer confirmationCode) {
         Message message = new MimeMessage(session);
@@ -136,6 +144,13 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
         message.setRecipient(Message.RecipientType.TO, new NewsAddress(email));
         Transport.send(message);
     }
+
+    /**
+     * Retrieves a JavaMail session configured with the provided properties for sending emails.
+     *
+     * @param properties The email properties used to configure the session.
+     * @return A configured JavaMail session.
+     */
     private Session getSession(Properties properties) {
         return Session.getInstance(properties, new Authenticator() {
             @Override
@@ -144,6 +159,12 @@ public class ConfirmationEmailServiceImpl implements ConfirmationEmailService {
             }
         });
     }
+
+    /**
+     * Generates and returns the properties required to configure the email sending.
+     *
+     * @return Properties object containing SMTP configuration.
+     */
     private Properties getProperties() {
         Properties properties = new Properties();
         properties.put("mail.smtp.host", "smtp.gmail.com");
